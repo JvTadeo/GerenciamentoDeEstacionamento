@@ -1,11 +1,8 @@
 from tkinter import * 
 
-
 root = Tk()
 root.title("SISTEMA DE ESTACIONAMENTO")
 root.geometry("640x520")
-
-photo1 = PhotoImage(file='Imagens\Car.png')
 
 
 class MainWindows(Tk):
@@ -13,12 +10,12 @@ class MainWindows(Tk):
 
         self.nameSystem = Label(root, text="GERENCIAMENTO DO ESTACIONAMENTO", font=('Roboto', 15), fg = 'white', bg='#CF0A0A', width=100, height=2, anchor=W, padx = 10)
 
-        self.vaga1 = Button(bg="#00C130")
-        self.vaga2 = Button(bg="#00C130")
-        self.vaga3 = Button(bg="#00C130")
-        self.vaga4 = Button(bg="#00C130")
-        self.vaga5 = Button(bg="#00C130")
-        self.vaga6 = Button(bg="#00C130")
+        self.vaga1 = Button(bg="#00C130", width=9, height=8, relief = GROOVE)
+        self.vaga2 = Button(bg="#00C130", width=9, height=8, relief = GROOVE)
+        self.vaga3 = Button(bg="#00C130", width=9, height=8, relief = GROOVE)
+        self.vaga4 = Button(bg="#00C130", width=9, height=8, relief = GROOVE)
+        self.vaga5 = Button(bg="#00C130", width=9, height=8, relief = GROOVE)
+        self.vaga6 = Button(bg="#00C130", width=9, height=8, relief = GROOVE)
 
 
         self.nameSystem.grid(column=1, row=0, columnspan = 10)
