@@ -1,5 +1,5 @@
 from tkinter import * 
-import cadastroDeCarros
+import database
 
 root = Tk()
 root.title("SISTEMA DE ESTACIONAMENTO")
@@ -40,10 +40,14 @@ class NewWindow():
         newRoot.configure(bg='#D9D9D9')
         newRoot.title("CADASTRO DE CARROS")
 
-        nome = Entry(newRoot, )
+        nome = Entry(newRoot, font=('Roboto', 15))
+        concluir = Button(newRoot, bg="#00C130", width=25, height=2, relief = GROOVE, bd = -1, text="CONCLUIR", font=('Roboto', 10), fg='#FFFFFF', command= lambda: database.insert(nome.get()))
+        
 
         nome.grid(column=1, row=0)
-        
+
+        concluir.place(x = 80, y = 180)
+
         
     
         
