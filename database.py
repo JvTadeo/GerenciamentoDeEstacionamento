@@ -40,20 +40,22 @@ def reverse(tuples):
     new_tup = tuples[::-1]
     return new_tup
 
-def insert(nome):
+def insert(nome, modelo, placa, entrada):
 
     conn = sqlite3.connect("data.db")
     cursor = conn.cursor()
     cursor.execute("""CREATE TABLE IF NOT EXISTS
-        carro(nome TEXT)""")
-    cursor.execute("INSERT INTO carro VALUES(?)", [nome])
+        carro(nome TEXT, modelo TEXT, placa TEXT PRIMARY KEY, HoraEntrada TEXT)""")
+    cursor.execute("INSERT INTO carro VALUES(?, ?, ?, ?)", (nome, modelo, placa, entrada))
     conn.commit()
+
+    print(nome, modelo, placa, entrada)
 
 
 def delete(data):
     conn = sqlite3.connect("data.db")
     cursor = conn.cursor()
     cursor.execute("""CREATE TABLE IF NOT EXISTS
-        aluno(alunoID TEXT, primeiraNota REAL, segundaNota REAL, media REAL)""")
-    cursor.execute("DELETE FROM aluno WHERE alunoID = '" + str(data) + "'")
+         carro(nome TEXT, modelo TEXT, placa TEXT PRIMARY KEY, HoraEntrada TEXT)""")
+    cursor.execute("DELETE FROM carro WHERE placa = '" + str(data) + "'")
     conn.commit()
