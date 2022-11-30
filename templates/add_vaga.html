@@ -1,0 +1,25 @@
+{% extend 'layout.html'%}
+{% block body %}
+
+<div class="row">
+    <div class="col - 5 mx-auto">
+        <h3>CADASTRE O NOVO VEÍCULO</h3>
+        <form method="post" action="{{url_for('add_vaga')}}">
+            <div class="form-group">
+                <label>Nome</label>
+                <input type="text" name="NOME required class="form-control">
+                <label>CPF</label>
+                <input type="text" name="CPF" required class="form-control">
+                <label>Hora Paga</label>
+                <input type="text" name="HORA_PAGA" required class="form-control">
+                <label>Placa</label>
+                <input type="text" name="PLACA" required class="form-control">
+                <label>Modelo</label>
+                <input type="text" name="MODELO" required class="form-control">
+            </div>
+            <input type="submit" value="Adicionar" class="btn btn-primary">
+        </form>
+    </div>
+</div>
+
+{% endblock%}

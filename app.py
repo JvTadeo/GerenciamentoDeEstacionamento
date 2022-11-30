@@ -4,15 +4,15 @@ import sqlite3 as sql
 app = Flask(__name__)
 
 @app.route("/")
-@app.route("/index")
 
+@app.route("/index")
 def index():
     con = sql.connect("data.db")
     con.row_factory=sql.Row
     cur=con.cursor()
-    cur.execute("select * from vagas")
+    cur.execute("select * from Vagas")
     data=cur.fetchall()
-    return render_template ("login.html", data=data)
+    return render_template ("index.html", data=data)
 
 #ADICIONAR DADOS
 @app.route("/add_vaga", methods=["POST", "GET"])
@@ -54,12 +54,13 @@ def edit_vaga(id):
     con = sql.connect("data.db")
     con.row_factory = sql.Row
     cur = con.cursor()
-    cur.execute("SELECT * FROM Vagas WHERE ID = ?"(cpf))
+    cur.execute("SELECT * FROM Vagas WHERE ID = ?"(id))
     data = cur.fetchone()
     return render_template("edit_vaga.html", data=data)
 
 #DELETAR DADOS
 @app.route("/delete_vaga/<string:id>", methods = ["GET"])
+
 def delete_vaga(id):
     con = sql.connect("data.db")
     cur = con.cursor()

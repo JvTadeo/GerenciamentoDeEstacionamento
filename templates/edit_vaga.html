@@ -1,0 +1,33 @@
+{% extend 'layout.html'%}
+{% block body %}
+
+<div class="row">
+    <div class="col-5 mx-auto">
+        <h3>Editar Dados</h3><hr>
+        <form method="post" action="{{url_for('edit_vaga', id=datas.VAGA)}}">
+            <div class="form group">                
+                <label>Nome</label>
+                <input type="text" name="NOME" required class="form-control" value="{{datas.NOME}}">                
+            </div>
+            <div class="form group">                
+                <label>CPF</label>
+                <input type="text" name="NOME" required class="form-control" value="{{datas.CPF}}">                
+            </div>
+            <div class="form group">                
+                <label>Hora Paga</label>
+                <input type="text" name="NOME" required class="form-control" value="{{datas.HORA_PAGA}}">                
+            </div>
+            <div class="form group">                
+                <label>Placa</label>
+                <input type="text" name="NOME" required class="form-control" value="{{datas.PLACA}}">                
+            </div>
+            <div class="form group">                
+                <label>Modelo</label>
+                <input type="text" name="NOME" required class="form-control" value="{{datas.MODELO}}">                
+            </div>
+            <input type="submit" value="Confirmar" class="btn btn-primary">
+        </form>
+    </div>
+</div>
+
+{% endblock%}
