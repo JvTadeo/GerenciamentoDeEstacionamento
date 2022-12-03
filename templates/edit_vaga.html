@@ -1,4 +1,4 @@
-{% extend 'layout.html'%}
+{% extends 'layout.html'%}
 {% block body %}
 
 <div class="row">
@@ -11,19 +11,19 @@
             </div>
             <div class="form group">                
                 <label>CPF</label>
-                <input type="text" name="NOME" required class="form-control" value="{{datas.CPF}}">                
+                <input type="text" name="CPF" required class="form-control" value="{{datas.CPF}}">                
             </div>
             <div class="form group">                
                 <label>Hora Paga</label>
-                <input type="text" name="NOME" required class="form-control" value="{{datas.HORA_PAGA}}">                
+                <input type="text" name="HORA_PAGA" required class="form-control" value="{{datas.HORA_PAGA}}">                
             </div>
             <div class="form group">                
                 <label>Placa</label>
-                <input type="text" name="NOME" required class="form-control" value="{{datas.PLACA}}">                
+                <input type="text" name="PLACA" required class="form-control" value="{{datas.PLACA}}">                
             </div>
             <div class="form group">                
                 <label>Modelo</label>
-                <input type="text" name="NOME" required class="form-control" value="{{datas.MODELO}}">                
+                <input type="text" name="MODELO" required class="form-control" value="{{datas.MODELO}}">                
             </div>
             <input type="submit" value="Confirmar" class="btn btn-primary">
         </form>
