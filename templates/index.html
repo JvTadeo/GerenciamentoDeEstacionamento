@@ -22,8 +22,8 @@
         <td>{{row.PLACA}}</td>
         <td>{{row.MODELO}}</td>
         <td>{{row.HORA_PAGA}}</td>
-        <td> <a href="{{url_for('edit_vaga', id=row.VAGA)}}" class="btn btn-primary"></a></td>
-        <td> <a href="{{url_for('delete_vaga', id=row.VAGA)}}" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja apagar?')"></a></td>
+        <td> <a href="{{url_for('edit_vaga', id=row.VAGA)}}" class="btn btn-primary">Editar</a></td>
+        <td> <a href="{{url_for('delete_vaga', id=row.VAGA)}}" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja apagar?')">Deletar</a></td>
       </tr>
       {% endfor %}
     </tbody>

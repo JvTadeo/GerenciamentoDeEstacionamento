@@ -6,7 +6,7 @@ cur.execute('DROP TABLE IF EXISTS vagas')
 
 sql = '''CREATE TABLE IF NOT EXISTS "Vagas" 
     (
-        "VAGA" INTEGER PRIMARY KEY
+        "VAGA" INTEGER PRIMARY KEY,
         "CPF" INTEGER,
         "NOME" TEXT,
         "PLACA" TEXT,
