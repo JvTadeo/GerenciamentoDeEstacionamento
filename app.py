@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 import sqlite3 as sql
+import graph
+
 
 app = Flask(__name__)
 
@@ -68,6 +70,8 @@ def delete_vaga(id):
     con.commit()
     flash("DADOS DELETADOS", "warning")
     return redirect(url_for("index"))
+
+
 
 if __name__ == '__main__':
     app.secret_key = 'admin123'
